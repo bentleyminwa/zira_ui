@@ -1,5 +1,6 @@
 import { Button } from '@zira-ui/ui';
 import Link from 'next/link';
+import { features } from '../lib/config';
 
 export default function Home() {
   return (
@@ -35,26 +36,23 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 border-t border-white/10 animate-in fade-in duration-1000 delay-700'>
-          <div className='space-y-2'>
-            <h3 className='font-bold text-lg text-white'>Performance First</h3>
-            <p className='text-sm text-muted-foreground'>
-              Minimal bundle size with full tree-shaking support.
-            </p>
-          </div>
-          <div className='space-y-2'>
-            <h3 className='font-bold text-lg text-white'>Accessible</h3>
-            <p className='text-sm text-muted-foreground'>
-              Built on top of Radix UI primitives for best-in-class
-              accessibility.
-            </p>
-          </div>
-          <div className='space-y-2'>
-            <h3 className='font-bold text-lg text-white'>Opinionated</h3>
-            <p className='text-sm text-muted-foreground'>
-              Carefully crafted variants and design patterns.
-            </p>
-          </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 animate-in fade-in duration-1000 delay-700'>
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className='group relative p-6 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/5 transition-all duration-300 hover:border-orange-brand/20 flex flex-col items-center'
+            >
+              <div className='mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-brand/10 text-orange-brand'>
+                <feature.icon className='h-6 w-6' />
+              </div>
+              <h3 className='font-bold text-lg text-white mb-2'>
+                {feature.title}
+              </h3>
+              <p className='text-sm text-muted-foreground leading-relaxed'>
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

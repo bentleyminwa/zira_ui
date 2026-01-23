@@ -9,10 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@zira-ui/ui": "workspace:*",
+    "lucide-react": "^0.378.0",
     "next": "16.1.4",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "@zira-ui/ui": "workspace:*"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
