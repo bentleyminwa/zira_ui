@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-start justify-center min-h-[calc(100vh-10rem)] py-20 px-4 md:px-8'>
-      <div className='max-w-3xl space-y-8'>
+    <div className='flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] py-20 px-4 md:px-8 text-center'>
+      <div className='max-w-4xl space-y-8 flex flex-col items-center'>
         <div className='space-y-4'>
           <h1 className='text-5xl md:text-7xl font-extrabold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-1000'>
             Build faster with <span className='text-orange-brand'>Zira UI</span>
@@ -15,8 +15,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className='flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500'>
-          <Link href='/docs/components/button'>
+        <div className='flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500'>
+          <Link href='/docs/installation'>
             <Button
               size='lg'
               className='bg-orange-brand hover:bg-orange-600 px-8 text-lg h-14'
@@ -24,7 +24,7 @@ export default function Home() {
               Get Started
             </Button>
           </Link>
-          <Link href='/docs/components/button'>
+          <Link href='/docs/introduction'>
             <Button
               variant='outline'
               size='lg'

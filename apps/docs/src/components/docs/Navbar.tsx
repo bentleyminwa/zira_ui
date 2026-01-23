@@ -12,7 +12,7 @@ export function Navbar() {
           </Link>
           <div className='hidden md:flex gap-6 text-sm font-medium'>
             <Link
-              href='/docs/components/button'
+              href='/docs/introduction'
               className='transition-colors hover:text-orange-brand'
             >
               Docs

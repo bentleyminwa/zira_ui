@@ -11,7 +11,10 @@ interface NavItem {
   disabled?: boolean;
 }
 
-const components: NavItem[] = [
+const navigation: NavItem[] = [
+  { type: 'separator', name: 'Getting Started' },
+  { name: 'Introduction', href: '/docs/introduction' },
+  { name: 'Installation', href: '/docs/installation' },
   { type: 'separator', name: 'Components' },
   { name: 'Button', href: '/docs/components/button' },
 ];
@@ -23,7 +26,7 @@ export function Sidebar() {
     <aside className='fixed top-16 z-30 hidden h-[calc(100vh-4rem)] w-full shrink-0 md:sticky md:block'>
       <div className='h-full overflow-y-auto py-6 pr-6 lg:py-8'>
         <div className='flex flex-col gap-2'>
-          {components.map((item, idx) => {
+          {navigation.map((item, idx) => {
             if (item.type === 'separator') {
               return (
                 <div
