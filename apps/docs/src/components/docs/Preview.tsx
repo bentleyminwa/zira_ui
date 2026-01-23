@@ -16,7 +16,7 @@ export function Preview({ children, className, code }: PreviewProps) {
           className,
         )}
       >
-        <div className='absolute inset-0 bg-grid-white/[0.02] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]' />
+        <div className='absolute inset-0 bg-grid-white/[0.02] mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]' />
         <div className='z-10'>{children}</div>
       </div>
     </div>

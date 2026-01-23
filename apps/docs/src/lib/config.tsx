@@ -17,3 +17,8 @@ export const features = [
     icon: Palette,
   },
 ];
+
+export const navLinks = [
+  { label: 'Docs', href: '/docs/introduction' },
+  { label: 'Components', href: '/docs/components/button' },
+];
