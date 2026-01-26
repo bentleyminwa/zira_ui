@@ -23,8 +23,8 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className='fixed top-16 z-30 hidden h-[calc(100vh-4rem)] w-full shrink-0 md:sticky md:block'>
-      <div className='h-full overflow-y-auto py-6 pr-6 lg:py-8'>
+    <aside className='fixed top-16 z-30 hidden h-[calc(100vh-4rem)] w-full shrink-0 border-r bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 md:sticky md:block'>
+      <div className='h-full overflow-y-auto py-6 px-6 lg:py-8'>
         <div className='flex flex-col gap-2'>
           {navigation.map((item, idx) => {
             if (item.type === 'separator') {

@@ -1,6 +1,6 @@
 export default function IntroductionPage() {
   return (
-    <div className='space-y-6'>
+    <div className='max-w-4xl mx-auto space-y-6'>
       <div className='space-y-2'>
         <h1 className='text-4xl font-bold tracking-tight'>Introduction</h1>
         <p className='text-lg text-muted-foreground'>

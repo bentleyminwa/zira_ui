@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@zira-ui/ui';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 interface TocItem {
@@ -10,6 +11,7 @@ interface TocItem {
 }
 
 export function TableOfContents() {
+  const pathname = usePathname();
   const [items, setItems] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
 
@@ -35,13 +37,13 @@ export function TableOfContents() {
 
     headings.forEach((heading) => observer.observe(heading));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   if (items.length === 0) return null;
 
   return (
     <div className='hidden text-sm lg:block'>
-      <div className='sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto pt-4'>
+      <div className='fixed top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 px-6 lg:py-8'>
         <p className='mb-4 font-semibold uppercase tracking-wider text-xs text-muted-foreground'>
           On This Page
         </p>

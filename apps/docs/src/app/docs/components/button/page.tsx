@@ -1,11 +1,10 @@
 import { CodeBlock } from '@/components/docs/CodeBlock';
 import { Preview } from '@/components/docs/Preview';
-import { TableOfContents } from '@/components/docs/TableOfContents';
 import { Button } from '@zira-ui/ui';
 
 export default function ButtonPage() {
   return (
-    <div className='flex flex-col lg:grid lg:grid-cols-[1fr,200px] lg:gap-10'>
+    <div className='max-w-4xl mx-auto'>
       <div className='space-y-10 pb-16'>
         {/* Header */}
         <div className='space-y-4'>
@@ -154,11 +153,6 @@ export default function ButtonPage() {
             </table>
           </div>
         </section>
-      </div>
-
-      {/* TOC */}
-      <div className='hidden lg:block'>
-        <TableOfContents />
       </div>
     </div>
   );

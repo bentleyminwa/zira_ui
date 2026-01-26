@@ -2,7 +2,7 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 
 export default function InstallationPage() {
   return (
-    <div className='space-y-6'>
+    <div className='max-w-4xl mx-auto space-y-6'>
       <div className='space-y-2'>
         <h1 className='text-4xl font-bold tracking-tight'>Installation</h1>
         <p className='text-lg text-muted-foreground'>
